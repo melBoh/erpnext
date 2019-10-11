@@ -17,7 +17,7 @@ frappe.ui.form.on("Sales Order", {
 
 		// formatter for material request item
 		frm.set_indicator_formatter('item_code',
-			function(doc) { return (doc.stock_qty<=doc.delivered_qty) ? "green" : "orange" })
+			function(doc) { return (doc.stock_qty<=doc.delivered_qty) ? "orange" : "green" })
 
 		frm.set_query('company_address', function(doc) {
 			if(!doc.company) {
